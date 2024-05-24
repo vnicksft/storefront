@@ -42,6 +42,8 @@ const getMedusaHeaders = (tags: string[] = []) => {
 
   const token = cookies().get("_medusa_jwt")?.value
 
+  alert(token);
+
   if (token) {
     headers.authorization = `Bearer ${token}`
   } else {
