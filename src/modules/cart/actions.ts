@@ -45,7 +45,6 @@ export async function getOrSetCart(countryCode: string) {
       cookies().set("_medusa_cart_id", cart.id, {
         maxAge: 60 * 60 * 24 * 7,
         httpOnly: true,
-        sameSite: "none",
       })
     revalidateTag("cart")
   }
