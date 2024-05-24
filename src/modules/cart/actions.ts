@@ -46,7 +46,6 @@ export async function getOrSetCart(countryCode: string) {
         maxAge: 60 * 60 * 24 * 7,
         httpOnly: true,
         sameSite: "none",
-        secure: process.env.NODE_ENV === "production",
       })
     revalidateTag("cart")
   }
